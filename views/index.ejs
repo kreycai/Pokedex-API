@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<header id="ind">
+    <nav>
+        <ul>
+            <li title="text"><a href="#ind">Pokedex</a></li>
+            <li title="text" id="T">PROJETO 2</li>
+            <li title="text"><a href="#cadastros">Cadastro</a></li>
+        </ul>
+    </nav>
+    <img src="https://pokedex.sleduardo.dev/img/logo.svg" alt="">
+</header>
+<body>
+    <main>
+        <article>
+            <form id="form" action="/pokemons" method="post">
+                <label title="text" for="0">Digite quantos pokemons quer ver:</label>
+                <input id="0" type="text" class="input" name="number" title="Digite quantos pokemons quer ver:">
+                <BUtton id="number" type="submit" class="tit">Pesquisar na Dex</BUtton>
+            </form>
+        </article>
+        <section id="cards">
+            <% pokedex.forEach((pokemon) => { %>
+                <div class="card">
+                    <p id="id" title="text">#<%= pokemon.id %></p>
+                    <img src="<%= pokemon.imagem %> " alt="imgpokemon">
+                    <h2 title="text"><%= pokemon.name %> </h2>
+                    <p title="text" class="status">HP: <%= pokemon.StatusHP %> </p>
+                    <p title="text" class="status">ATK:<%= pokemon.StatusAtaque %> </p>
+                    <p title="text" class="status">DEF:<%= pokemon.StatusDefesa %> </p>
+                    <p title="text" class="status">SP.ATK:<%= pokemon.StatusSuperAtaque %> </p>
+                    <p title="text" class="status">SP.DEF:<%= pokemon.StatusSuperDefesa %> </p>
+                    <p title="text" class="status">VEL.: <%= pokemon.StatusVelocidade %> </p>
+                </div>
+            <% }) %>
+        </section>
+        <section id="cadastros">
+            <form action="/registro" method="post" id="cadastro">
+                <h2 class="tit" title="text">CADASTRO POKEMON</h2>
+
+                <label for="1" title="text">Link Da Imagem:</label>
+                <input type="text" class="input" id="1" name="imagem" title="Link Da Imagem:">
+
+                <label title="text" for="2">Nome:</label>
+                <input type="text" class="input" id="2" name="name" title="Nome:">
+
+                <label title="text" for="3">Hp:</label>
+                <input type="text" class="input" id="3" name="StatusHP" title="Hp:">
+
+                <label title="text" for="4">Atk:</label>
+                <input type="text" class="input" id="4" name="StatusAtaque" title="Atk:">
+
+                <label title="text" for="5">Def:</label>
+                <input type="text" class="input" id="5" name="StatusDefesa" title="Def:">
+
+                <label title="text" for="6">Sp.Atk:</label>
+                <input type="text" class="input" id="6" name="StatusSuperAtaque" title="Sp.Atk:">
+
+                <label title="text" for="7">Sp.Def:</label>
+                <input type="text" class="input" id="7" name="StatusSuperDefesa" title="Sp.Def:">
+
+                <label title="text" for="8">Velocidade:</label>
+                <input type="text" class="input" id="8" name="StatusVelocidade" title="Velocidade:">
+
+                <button id="button" type="submit" class="tit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2 title="text">UM AGRADECIMENTO AO PAULO SALVATORE</h2>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

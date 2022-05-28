@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "yugi";
+    src: url("./fonts/Pokemon Solid.ttf") format("truetype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+    font-family: yugi;
+}
+body{
+    height: 100vh;
+}
+[title]{
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+
+header{
+    display: flex;
+    padding-bottom: 3rem;
+    align-content: center;
+    justify-content: center;
+}
+header img{
+    margin-top: 6.7rem;
+    display: flex;
+    width: 85%;
+    pointer-events: none;
+}
+header nav{
+    background-color: #E83E34;
+    width: 100%;
+    position:fixed;
+}
+header nav ul{
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+header nav ul li#T{
+    color:rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-align: center;
+    padding-left: 0.4rem;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+header nav ul li a{
+    color: #ffff;
+    transition: transform 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+ul li:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+main{
+    margin: 0 3rem 0rem 3rem;
+}
+
+article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+article form{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+article form label{
+    font-size: 1.07rem;
+    margin-bottom: 0.2rem;
+}
+article form input{
+    width: 100%;
+    margin-bottom: 0.7rem;
+    border: solid 1px black;
+    font-size: 1.2rem;
+    text-align: start;
+    justify-content: center;
+    padding: 0.3rem 0 0.8rem 0.4rem;
+    height: 1.1rem;
+}
+article form button{
+    display: flex;
+    border: solid 1px #E83E34;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+    background-color:rgb(250, 250, 250);
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px 5px #E83E34;
+    width:auto;
+    height: auto;
+    margin-bottom: 4rem;
+    transition: all 0.5s;
+    margin-top: 0.8rem;
+    padding: 0.25rem 2rem 0.75rem 2rem;
+    font-size: 1rem;
+}
+article form button:hover{
+    background-color:#E83E34;
+    border: solid 2px #1B356E;
+    box-shadow: 0px 0px 0px 0px #E83E34;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+
+
+article form button.tat{
+    margin-top: 0.8rem;
+    padding: 0.25rem 2rem 0.75rem 2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 0px #000000d0;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+    background-color:rgb(155, 155, 155);
+    border: solid 1px #000000d0;
+}
+
+
+section#cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+section#cards img{
+    width: 100%;
+}
+
+section#cards div.card{
+    width: 5rem;
+    box-shadow: 3px 3px 3px 5px #E83E34;
+    padding: 0 2rem 1rem 2rem;
+    margin: 0.5rem 0.5rem 1.3rem 0.5rem;
+}
+section#cards div.card p.status{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:center;
+    text-decoration: underline;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+section#cards div.card p#id{
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+section#cards div.card img{
+    width: 100%;
+}
+section#cards div.card h2{
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+section#cadastros{
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+section#cadastros form#cadastro .tit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+section#cadastros form#cadastro .tat{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+section#cadastros form#cadastro h2{
+    text-align: center;
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 1.5rem;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 0.7rem;
+    border: solid 1px black;
+    font-size: 1.2rem;
+    text-align: start;
+    justify-content: center;
+    padding: 0.3rem 0 0.8rem 0.4rem;
+    height: 1.1rem;
+}
+
+/* DOM */
+section#cadastros form#cadastro button.tit#button{
+    display: flex;
+    border: solid 1px #E83E34;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+    background-color:rgb(250, 250, 250);
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px 5px #E83E34;
+    width:auto;
+    height: auto;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+    margin-top: 0.8rem;
+    padding: 0.25rem 2rem 0.75rem 2rem;
+    font-size: 1rem;
+}
+section#cadastros form#cadastro button#button.tit:hover{
+    background-color:#E83E34;
+    border: solid 2px #1B356E;
+    box-shadow: 0px 0px 0px 0px #E83E34;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+}
+
+/* CSS abaixo manipulado no Script.js */
+section#cadastros form#cadastro button.tit{
+    margin-top: 0.8rem;
+    padding: 0.25rem 2rem 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+section#cadastros form#cadastro button.tat{
+    margin-top: 0.8rem;
+    padding: 0.25rem 2rem 0.75rem 2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 0px #000000d0 !important;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5!important;
+    text-shadow: -3px 2.3px #1B356E!important;
+    background-color:rgb(155, 155, 155) !important;
+    border: solid 1px #000000d0;
+}
+/* FINAL DO CSS MANIPULADO */
+
+
+footer{
+    margin-top: 3rem;
+    background-color: #E83E34;
+    padding: 2rem;
+    align-content: center;
+}
+footer h2{
+    text-align: center;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+
+}
+
+
+/* ABAIXO ESTA O CSS DO HOME.EJS */
+section.click{
+
+    display: flex;
+    flex-direction: column;
+}
+div.click{
+
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    height: 100vh;
+    
+}
+div#click form{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+}
+div#click button#button{
+    display: flex;
+    border: solid 1px #E83E34;
+    color: #FFCC01;
+    -webkit-text-stroke: 1.1px #2C6CB5;
+    text-shadow: -3px 2.3px #1B356E;
+    background-color:rgb(250, 250, 250);
+    padding: 3rem;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px 5px #E83E34;
+    width:auto;
+    height: auto;
+    margin-bottom: 5rem;
+    transition: all 0.5s;
+}
+div#click button#button:hover{
+    background-color:#E83E34;
+    color: #FFCC01;
+    border: solid 2px #1B356E;
+    box-shadow: 0px 0px 0px 0px #E83E34;
+}
+
+
+
+
+
+
