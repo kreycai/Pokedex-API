@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded());
 app.use(express.static(path.join("public")));
 
-// let condition = false;
+let condition = false;
 // export {condition};
 
 let pokedex = [];
@@ -19,7 +19,7 @@ async function poke (){
 
 
     console.time();
-
+    try {
     const respostaDaRequisicao = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${numeroDePok}`);
     const respReqParaJson = await respostaDaRequisicao.json();
     const pokesList = respReqParaJson.results
@@ -55,7 +55,10 @@ async function poke (){
     })
     
     pokedex = await Promise.all(ArrayDosResults)
-
+    } catch (error) {
+        condition = true;
+        numeroDePok = "9";
+    }   
     console.timeEnd();
 }
 
@@ -63,13 +66,16 @@ async function poke (){
 
     app.get('/', async (req, res) => {
         await poke();
-        res.render('home', {pokedex, numeroDePok});
+        res.render('home', {pokedex, numeroDePok,condition});
     })
 
 
     app.get('/add', async(req, res) => {
-        await poke();
-        res.render('index', {pokedex,numeroDePok});
+        res.render('index', {pokedex,numeroDePok,condition});
+        condition = false;
+
+
+
     })
 
 

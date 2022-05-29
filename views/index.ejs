@@ -19,13 +19,23 @@
 </header>
 <body>
     <main>
-        <article>
+        <% if (condition) { %>
+            <article id="oi">
+                <form id="form" action="/pokemons" method="post">
+                    <label title="text" for="0">Digite quantos pokemons quer ver:</label>
+                    <input id="0" type="text" class="input" name="number" title="Digite quantos pokemons quer ver:">
+                    <BUtton id="number" type="submit" class="tit">Pesquisar na Dex</BUtton>
+                </form>
+            </article>
+        <% } else { %>
+            <article id="nada">
             <form id="form" action="/pokemons" method="post">
                 <label title="text" for="0">Digite quantos pokemons quer ver:</label>
                 <input id="0" type="text" class="input" name="number" title="Digite quantos pokemons quer ver:">
                 <BUtton id="number" type="submit" class="tit">Pesquisar na Dex</BUtton>
             </form>
         </article>
+        <%} %>
         <section id="cards">
             <% pokedex.forEach((pokemon) => { %>
                 <div class="card">
@@ -76,6 +86,7 @@
     <footer>
         <h2 title="text">UM AGRADECIMENTO AO PAULO SALVATORE</h2>
     </footer>
-    <script type="module" src="script.js"></script>
+
 </body>
+<script type="module" src="script.js"></script>
 </html>

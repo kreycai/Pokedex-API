@@ -2,8 +2,7 @@ const button = window.document.getElementById("button");
 const buttonNumber = window.document.getElementById("number")
 const input = window.document.querySelectorAll("input");
 const label = window.document.querySelectorAll("label");
-// import condition from '../index.js';
-// import * as condition from '../index.js';
+const form = window.document.getElementById("oi");
 let split = [];
 let Key;
 let b = 0;
@@ -80,6 +79,11 @@ input.forEach(element => {
     })
         
 });
+addEventListener("load", ()=>{
+    if(form.id == "oi"){
+        alert("Desculpe, você esta fazendo muitas requisições e nao podemos atende-las, por favor, tente novamente mais tarde")
+    }
+})
 addEventListener("mousemove", (e)=>{
     label.forEach(a=>{
         if(a.style.color == "rgb(255, 204, 1)"){
