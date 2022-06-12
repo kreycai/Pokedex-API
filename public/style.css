@@ -149,7 +149,7 @@ section#cards img{
 }
 
 section#cards div.card{
-    width: 5rem;
+    width: 10%;
     box-shadow: 3px 3px 3px 5px #E83E34;
     padding: 0 2rem 1rem 2rem;
     margin: 0.5rem 0.5rem 1.3rem 0.5rem;
